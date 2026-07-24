@@ -1,60 +1,91 @@
-body{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: hsl(257, 40%, 49%);
-    background-repeat: no-repeat;
-    background-size: auto;
     background-image: url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
 }
-.logo{
-    margin: 40px;
+
+.logo img {
+    max-width: 160px;
 }
-.body{
-    display:flex;
-    align-items: top;
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin: auto 0;
 }
-.phot img{
+
+.phot {
+    flex: 1;
+    max-width: 50%;
+}
+
+.phot img {
     width: 100%;
+    height: auto;
+    display: block;
+}
 
+.heading {
+    flex: 1;
+    max-width: 45%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
-.phot{
 
-    margin-left: 50px;
-    margin-top: 50px;
+.heading h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
 }
-.heading{
-    margin-left: 30px;
-    margin-top:60px;
-    font-family:Poppins;
-    color:white;
-    font-size: 25px;
+
+.heading p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
 }
-.contact{
-    font-family: OpenSans;
-    font-size: 24px;
-}
-.icons img{
-    width: 45px;
-}
-.icons{
-    display:flex;
-    margin-top: 590px;
-    margin-left: 110px;
-    gap:25px;
-}
+
 .register {
     background-color: white;
     color: hsl(257, 40%, 49%); 
-    padding: 20px 70px;        
+    padding: 12px 60px;        
     border: none;             
     border-radius: 30px;       
-    font-size: 20px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;           
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); 
-    margin-top: 20px;
     transition: all 0.3s ease; 
 }
 
 .register:hover {
     background-color: hsl(300, 69%, 71%); 
     color: white;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
